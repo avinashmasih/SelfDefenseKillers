@@ -7,7 +7,7 @@ using Oculus.Platform.Models;
 
 public class PlayerController : SocialPlatformManager
 {
-
+    public int speed = 0;
     // Secondary camera to debug and view the whole scene from above
     public Camera spyCamera;
 
@@ -34,6 +34,16 @@ public class PlayerController : SocialPlatformManager
     {
         base.Update();
         checkInput();
+       
+            // get input data from keyboard or controller
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            // update player position based on input
+            Vector3 position = transform.position;
+            position.x += moveHorizontal * speed * Time.deltaTime;
+            position.z += moveVertical * speed * Time.deltaTime;
+            transform.position = position;
+        
     }
 
     // Check for input from the touch controllers

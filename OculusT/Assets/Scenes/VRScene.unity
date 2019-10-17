@@ -844,5 +844,8 @@ MonoBehaviour:
   gearMaterial: {fileID: 0}
   roomSphere: {fileID: 0}
   roomFloor: {fileID: 0}
+<<<<<<< Updated upstream
   speed: 0
+=======
+>>>>>>> Stashed changes
   spyCamera: {fileID: 0}

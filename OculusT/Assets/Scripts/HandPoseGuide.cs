@@ -12,7 +12,8 @@ public class HandPoseGuide
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!OVRInput.Get(OVRInput.NearTouch.PrimaryIndexTrigger, m_controller) == true)
+        if(OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) == true && (OVRInput.Get(OVRInput.Touch.PrimaryThumbRest)) == false)
+            
         {
             m_VRhandDetected = true;
             transform.GetComponent<Renderer>().material.color = greencolor;

@@ -12,21 +12,12 @@ public class Tutorial : MonoBehaviour
     private bool input = false;
     void Start()
     {
-        
+
     }
-    
+
     void Update()
     {
-        orient.SetActive(true);
         leftpoke.SetActive(false);
         rightpoke.SetActive(false);
-        StartCoroutine(OnStart());
-    }
-
-    private IEnumerator OnStart()
-    {
-
-        orient.SetActive(false);
-        leftpoke.SetActive(true);
     }
 }

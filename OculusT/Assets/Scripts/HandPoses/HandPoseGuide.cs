@@ -17,7 +17,6 @@ public class HandPoseGuide : MonoBehaviour
             HandPose otherHandPose = other.GetComponent<UserHandPose>().GetHandPose();
             if (otherHandPose == handPose)
             {
-                Debug.Log("Collided");
                 transform.GetComponent<Renderer>().material.color = greencolor;
             }
         }

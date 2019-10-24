@@ -5,8 +5,10 @@ public partial class UserHandPose : MonoBehaviour
     public bool isLeftHand;
     private bool lIndex;
     private bool lHand;
+    private bool lStick;
     private bool rIndex;
     private bool rHand;
+    private bool rStick;
     private HandPose _pose;
 
     public HandPose GetHandPose()
@@ -19,13 +21,17 @@ public partial class UserHandPose : MonoBehaviour
     {
         lIndex = OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger);
         lHand = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger);
+        lStick = OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft);
         rIndex = OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger);
         rHand = OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
+        rHand = OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
+        rStick = OVRInput.Get(OVRInput.Button.PrimaryThumbstickRight);
+        
 
         if (isLeftHand)
         {
             //Left Punch
-            if (lIndex && lHand)
+            if (lIndex && lHand && lStick)
             {
                 _pose = HandPose.LPunch;
                 //Debug.Log("LeftPunch");
@@ -48,7 +54,7 @@ public partial class UserHandPose : MonoBehaviour
         if (!(isLeftHand))
         {
             //Right Punch
-            if (rIndex && rHand)
+            if (rIndex && rHand && rStick)
             {
                 _pose = HandPose.RPunch;
                 //Debug.Log("RightPunch");

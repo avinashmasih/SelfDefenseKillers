@@ -8,11 +8,11 @@ public class AssailantState : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (OVRInput.Get(OVRInput.Button.One))
         {
             anim.SetTrigger("startAttack");
         }
-        if(Input.GetKey(KeyCode.X))
+        if(OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
         {
             anim.SetBool("gotPoked", true);
         }

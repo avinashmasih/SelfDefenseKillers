@@ -12,6 +12,8 @@ public class BezierFollow : MonoBehaviour
     private Vector3 handPosition;
     private float speedModifier;
     private bool coroutineAllowed;
+    private bool keypress;
+    
 
 
     // Start is called before the first frame update
@@ -20,16 +22,28 @@ public class BezierFollow : MonoBehaviour
         routeToGo = 0;//start with first curve
         tParam = 0f;
         speedModifier = 0.4f;
+        keypress = false;
+        
         coroutineAllowed = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (coroutineAllowed)
-        {
-            StartCoroutine(GoByTheRoute(routeToGo));
+        /*
+        if (OVRInput.Get(OVRInput.Button.One)&&!coroutineAllowed){
+
+            keypress = true;
+            coroutineAllowed = true;
         }
+
+        */
+        if (coroutineAllowed)
+            {
+                StartCoroutine(GoByTheRoute(routeToGo));
+                   
+            }
+        
     }
 
     private IEnumerator GoByTheRoute(int routeNumber)

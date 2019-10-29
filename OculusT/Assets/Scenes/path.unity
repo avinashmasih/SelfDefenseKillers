@@ -349,36 +349,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1294769407}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &305353523
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 305353524}
-  m_Layer: 0
-  m_Name: Controlpoint3
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: f08e78a627bb6496588af2ac4125d711, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &305353524
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305353523}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.04, y: -0.93, z: -5.46}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1765359335}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &429571137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,7 +424,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 429571137}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &556859534
+--- !u!114 &556859539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,9 +433,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 556859533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b8939e829164b409744eb0875fafbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 086ebfc2ccecae14889a8ff4d4dd3f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routes:
+  - {fileID: 1765359335}
 --- !u!1 &584133548
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,36 +879,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &972048967
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 972048968}
-  m_Layer: 0
-  m_Name: Controlpoint1
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: e6f0b671fa768455ba13a47e55071566, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &972048968
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972048967}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.85, y: 0, z: 0.44}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1765359335}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1081431102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,36 +1005,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.005
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!1 &1087047046
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1087047047}
-  m_Layer: 0
-  m_Name: Controlpoint4
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 914d9f4f5db5440b4a47462602a300b4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1087047047
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087047046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3, y: 0.92, z: -3.46}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1765359335}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093097658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,11 +1687,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 972048968}
-  - {fileID: 1878873328}
-  - {fileID: 305353524}
-  - {fileID: 1087047047}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1796,10 +1704,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlPoints:
-  - {fileID: 972048968}
-  - {fileID: 1878873328}
-  - {fileID: 305353524}
-  - {fileID: 1087047047}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1803226818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,36 +1799,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803226818}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1878873327
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1878873328}
-  m_Layer: 0
-  m_Name: Controlpoint2
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 4652fa3c0ec9649d489cb697afa91b7d, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1878873328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878873327}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 1.75, z: -1.51}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1765359335}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887970038
 GameObject:
   m_ObjectHideFlags: 0

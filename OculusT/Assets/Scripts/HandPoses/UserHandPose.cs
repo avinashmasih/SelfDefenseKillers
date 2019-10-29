@@ -34,7 +34,7 @@ public partial class UserHandPose : MonoBehaviour
             if (lIndex && lHand && lStick)
             {
                 _pose = HandPose.LPunch;
-                //Debug.Log("LeftPunch");
+                Debug.Log("LeftPunch");
             }
 
             //Left Poke

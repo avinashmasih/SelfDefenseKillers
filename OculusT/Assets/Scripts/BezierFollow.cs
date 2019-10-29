@@ -19,7 +19,7 @@ public class BezierFollow : MonoBehaviour
     {
         routeToGo = 0;//start with first curve
         tParam = 0f;
-        speedModifier = 0.5f;
+        speedModifier = 0.4f;
         coroutineAllowed = true;
     }
 

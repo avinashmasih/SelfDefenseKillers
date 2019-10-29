@@ -24,8 +24,7 @@ public partial class UserHandPose : MonoBehaviour
         lStick = OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft);
         rIndex = OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger);
         rHand = OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
-        rHand = OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
-        rStick = OVRInput.Get(OVRInput.Button.PrimaryThumbstickRight);
+        rStick = OVRInput.Get(OVRInput.Button.SecondaryThumbstickRight);
         
 
         if (isLeftHand)
@@ -34,7 +33,7 @@ public partial class UserHandPose : MonoBehaviour
             if (lIndex && lHand && lStick)
             {
                 _pose = HandPose.LPunch;
-                Debug.Log("LeftPunch");
+                //Debug.Log("LeftPunch");
             }
 
             //Left Poke

@@ -42,6 +42,15 @@ public class CollisionDetection : MonoBehaviour
             animator.SetBool("gotPoked", true);
         }
         */
+        if (OVRInput.Get(OVRInput.Button.Two))
+        {
+            if (OVRInput.Get(OVRInput.Button.Two))
+            {
+                animator.SetBool("reset", true);
+            
+                
+            }
+        }
     }
 
     /*

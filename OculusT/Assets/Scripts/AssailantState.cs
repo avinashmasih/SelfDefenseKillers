@@ -17,7 +17,9 @@ public class AssailantState : MonoBehaviour
             {
                 anim.SetBool("gotPoked", true);
             }
-        } 
+        }
+
+      
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("groinApproach");
@@ -41,13 +43,13 @@ public class AssailantState : MonoBehaviour
     {
         //Clearing out
         //Eye Poke
-        //anim.SetBool("gotPoked", false);
+        anim.SetBool("gotPoked", false);
         //groin punch
-        //anim.SetBool("groinHit", false);
+        anim.SetBool("groinHit", false);
         //Block
-        //anim.SetBool("gotBlock", false);
+        anim.SetBool("gotBlock", false);
         //Reset to idle
-        //anim.SetBool("reset",false);
+        anim.SetBool("reset",false);
     }
 
     public void setPoked()

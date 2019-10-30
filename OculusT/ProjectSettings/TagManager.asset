@@ -8,6 +8,7 @@ TagManager:
   - TeleportIgnore
   - LeftHand
   - RightHand
+  - KneeBox
   layers:
   - Default
   - TransparentFX

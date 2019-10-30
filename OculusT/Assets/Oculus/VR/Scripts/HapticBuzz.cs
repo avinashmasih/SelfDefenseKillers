@@ -20,7 +20,7 @@ public class HapticBuzz : MonoBehaviour
     {
        OVRHaptics.LeftChannel.Mix(buzz);
        OVRHaptics.RightChannel.Mix(buzz);
-    /*
+    
        if (hand.gameObject.tag == "LeftHand")
         {
             if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
@@ -36,7 +36,7 @@ public class HapticBuzz : MonoBehaviour
                 OVRHaptics.RightChannel.Mix(buzz);
             }
         }
-        */
+        
     }
 
         private void OnTriggerStay(Collider hand)

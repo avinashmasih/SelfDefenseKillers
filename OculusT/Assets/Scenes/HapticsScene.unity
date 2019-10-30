@@ -565,7 +565,6 @@ GameObject:
   - component: {fileID: 222656362}
   - component: {fileID: 222656361}
   - component: {fileID: 222656364}
-  - component: {fileID: 222656365}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -659,20 +658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greencolor: {r: 0, g: 1, b: 0, a: 1}
   whitecolor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &222656365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222656359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb92a72120187f4390febfe3ec7fd2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_controller: 1
-  audiofile: {fileID: 8300000, guid: d716392289ac6764994885f5821f7d7b, type: 3}
 --- !u!1 &242819807
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +778,7 @@ GameObject:
   - component: {fileID: 283091190}
   m_Layer: 0
   m_Name: CubeKnees
-  m_TagString: KneeBox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -970,10 +955,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CustomHandLeft
       objectReference: {fileID: 0}
-    - target: {fileID: 143668, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
-      propertyPath: m_TagString
-      value: LeftHand
-      objectReference: {fileID: 0}
     - target: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1022,10 +1003,6 @@ PrefabInstance:
       propertyPath: m_parentTransform
       value: 
       objectReference: {fileID: 345117848}
-    - target: {fileID: 11438496, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
-      propertyPath: audiofile
-      value: 
-      objectReference: {fileID: 8300000, guid: d716392289ac6764994885f5821f7d7b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
 --- !u!1 &465400470
@@ -2977,10 +2954,6 @@ PrefabInstance:
     - target: {fileID: 195418, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_Name
       value: CustomHandRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 195418, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
-      propertyPath: m_TagString
-      value: RightHand
       objectReference: {fileID: 0}
     - target: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_LocalPosition.x

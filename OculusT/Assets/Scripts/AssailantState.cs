@@ -19,12 +19,15 @@ public class AssailantState : MonoBehaviour
             }
         }
 
-      
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        //if (Input.GetKeyDown(KeyCode.Space))
+        if (OVRInput.Get(OVRInput.Button.Three))
         {
             anim.SetTrigger("groinApproach");
         }
-        if (Input.GetKeyDown(KeyCode.X))
+
+        //if (Input.GetKeyDown(KeyCode.X))
+        if (OVRInput.Get(OVRInput.Button.Four))
         {
             anim.SetTrigger("punchApproach");
         }
@@ -39,7 +42,7 @@ public class AssailantState : MonoBehaviour
         //Reset()
     }
 
-    private void Reset()
+    public void Reset()
     {
         //Clearing out
         //Eye Poke

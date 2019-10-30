@@ -42,14 +42,18 @@ public class CollisionDetection : MonoBehaviour
             animator.SetBool("gotPoked", true);
         }
         */
+        
+
         if (OVRInput.Get(OVRInput.Button.Two))
         {
             if (OVRInput.Get(OVRInput.Button.Two))
             {
                 animator.SetBool("reset", true);
-            
-                
+                animator.SetBool("gotPoked", false);
+
+
             }
+            
         }
     }
 
@@ -73,7 +77,11 @@ public class CollisionDetection : MonoBehaviour
         transform.GetComponent<Renderer>().material.color = greencolor;
         //GameObject obj_assailant = GameObject.FindWithTag("Assailant");
         //GameObject obj_animator = GameObject.FindWithTag("Assailant");
-        animator.SetBool("gotPoked", true);
+
+        if (gameObject.tag == "Poke")
+        {
+            animator.SetBool("gotPoked", true);
+        }
         /*
         if (obj_assailant != null)
         {

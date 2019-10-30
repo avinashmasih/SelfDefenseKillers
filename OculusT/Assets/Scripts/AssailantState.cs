@@ -55,8 +55,5 @@ public class AssailantState : MonoBehaviour
         anim.SetBool("gotPoked", true);
     }
 
-    public void setPoke()
-    {
-        poked = true;
-    }
+   
 }

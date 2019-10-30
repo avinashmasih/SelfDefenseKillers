@@ -6,12 +6,17 @@ public class AssailantState : MonoBehaviour
 {
     public Animator anim;
     public bool reset = false;
+    public bool poked = false;
 
     private void Update()
     {
         if (OVRInput.Get(OVRInput.Button.One))
         {
             anim.SetTrigger("pokeApproach");
+            if(poked)
+            {
+                anim.SetBool("gotPoked", true);
+            }
         } 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -43,5 +48,15 @@ public class AssailantState : MonoBehaviour
         //anim.SetBool("gotBlock", false);
         //Reset to idle
         //anim.SetBool("reset",false);
+    }
+
+    public void setPoked()
+    {
+        anim.SetBool("gotPoked", true);
+    }
+
+    public void setPoke()
+    {
+        poked = true;
     }
 }

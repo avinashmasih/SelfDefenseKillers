@@ -566,7 +566,6 @@ GameObject:
   - component: {fileID: 222656361}
   - component: {fileID: 222656364}
   - component: {fileID: 222656365}
-  - component: {fileID: 222656366}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -660,7 +659,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greencolor: {r: 0, g: 1, b: 0, a: 1}
   whitecolor: {r: 1, g: 1, b: 1, a: 1}
-  assailant: {fileID: 1607687504}
 --- !u!114 &222656365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,22 +673,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_controller: 0
   audiofile: {fileID: 8300000, guid: d716392289ac6764994885f5821f7d7b, type: 3}
---- !u!54 &222656366
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222656359}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &242819807
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +827,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greencolor: {r: 0, g: 1, b: 0, a: 1}
   whitecolor: {r: 1, g: 1, b: 1, a: 1}
-  assailant: {fileID: 0}
 --- !u!65 &283091191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3295,7 +3276,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1607687503}
   reset: 0
-  poked: 0
 --- !u!1 &1614569861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 195418, guid: ba1fa4a8c66106b4988c88fe4b8e8502,

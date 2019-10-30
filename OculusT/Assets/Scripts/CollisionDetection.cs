@@ -7,19 +7,41 @@ public class CollisionDetection : MonoBehaviour
 
     public Color greencolor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
     public Color whitecolor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    bool bCollision;
 
-
-
+    public Animator animator;
+    public AssailantState assailant;
+    public GameObject obj_assailant;
+        
     // Start is called before the first frame update
     void Start()
     {
-        
+        //assailant = GetComponent<AssailantState>();
+        //animator = GetComponent<Animator>();
+        //animator = gameObject.GetComponent<Animator>();
+        //assailant = gameObject.GetComponent<AssailantState>();
+        GameObject obj_assailant = GameObject.FindWithTag("Assailant");
+        //bCollision = false;
+        if (obj_assailant != null)
+        {
+            animator = obj_assailant.GetComponent<Animator>();
+            
+        }
+        if (obj_assailant == null)
+        {
+            Debug.Log("Cannot Find Assailaint object");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        /*
+        if (bCollision)
+        {
+            animator.SetBool("gotPoked", true);
+        }
+        */
     }
 
     /*
@@ -39,8 +61,23 @@ public class CollisionDetection : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
-                 transform.GetComponent<Renderer>().material.color = greencolor;
-       }
+        transform.GetComponent<Renderer>().material.color = greencolor;
+        //GameObject obj_assailant = GameObject.FindWithTag("Assailant");
+        //GameObject obj_animator = GameObject.FindWithTag("Assailant");
+        animator.SetBool("gotPoked", true);
+        /*
+        if (obj_assailant != null)
+        {
+            animator = obj_assailant.GetComponent<Animator>();
+            animator.SetBool("gotPoked", true);
+        }
+        if (obj_assailant == null)
+        {
+            Debug.Log("Cannot Find Assailaint object");
+        }
+        */
+       
+    }
 
 
     private void OnTriggerExit(Collider other)

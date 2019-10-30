@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Haptic : MonoBehaviour
 {
-
+    //private AssailantState assailant;
     [SerializeField]
     protected OVRInput.Controller m_controller;
     public AudioClip audiofile;
@@ -30,6 +30,8 @@ public class Haptic : MonoBehaviour
         if (otherCollider.gameObject.tag == "LeftHand")
         {
             OVRHaptics.LeftChannel.Preempt(buzz);
+            //assailant.setPoked();
+            
         }
 
         if (otherCollider.gameObject.tag == "RightHand")

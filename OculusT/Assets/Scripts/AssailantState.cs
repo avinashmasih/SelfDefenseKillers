@@ -12,7 +12,7 @@ public class AssailantState : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.One))
         {
             anim.SetTrigger("pokeApproach");
-        }
+        } 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("groinApproach");

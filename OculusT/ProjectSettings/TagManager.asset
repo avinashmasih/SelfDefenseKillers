@@ -9,6 +9,10 @@ TagManager:
   - LeftHand
   - RightHand
   - KneeBox
+  - Assailant
+  - Poke
+  - Punch
+  - Groin
   layers:
   - Default
   - TransparentFX

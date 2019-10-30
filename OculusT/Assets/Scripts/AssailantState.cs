@@ -10,9 +10,9 @@ public class AssailantState : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.One))
+        if (OVRInput.Get(OVRInput.Button.One))//button A
         {
-            anim.SetTrigger("pokeApproach");
+            anim.SetTrigger("pokeApproach");//animations for poke & punch approach and fail state are the same / differ in win state
             if(poked)
             {
                 anim.SetBool("gotPoked", true);
@@ -21,13 +21,13 @@ public class AssailantState : MonoBehaviour
 
 
         //if (Input.GetKeyDown(KeyCode.Space))
-        if (OVRInput.Get(OVRInput.Button.Three))
+        if (OVRInput.Get(OVRInput.Button.Three))//button x
         {
             anim.SetTrigger("groinApproach");
         }
 
         //if (Input.GetKeyDown(KeyCode.X))
-        if (OVRInput.Get(OVRInput.Button.Four))
+        if (OVRInput.Get(OVRInput.Button.Four))//button Y
         {
             anim.SetTrigger("punchApproach");
         }
@@ -42,7 +42,7 @@ public class AssailantState : MonoBehaviour
         //Reset()
     }
 
-    public void Reset()
+    public void Reset()//button B defined in collisionDetection.cs
     {
         //Clearing out
         //Eye Poke

@@ -12,6 +12,8 @@ public class CollisionDetection : MonoBehaviour
     public Animator animator;
     public AssailantState assailant;
     public GameObject obj_assailant;
+
+    public int animationType;
         
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,24 @@ public class CollisionDetection : MonoBehaviour
         {
             Debug.Log("Cannot Find Assailaint object");
         }
+
+        if (gameObject.tag == "Poke")
+        {
+            animationType = 1;
+        }
+
+        if (gameObject.tag == "Punch")
+        {
+            animationType = 2;
+        }
+
+        if (gameObject.tag == "Groin")
+        {
+            animationType = 3;
+        }
+
+
+
     }
 
     // Update is called once per frame
@@ -50,7 +70,8 @@ public class CollisionDetection : MonoBehaviour
             {
                 animator.SetBool("reset", true);
                 animator.SetBool("gotPoked", false);
-
+                animator.SetBool("gotBlock", false);
+                animator.SetBool("groinHit", false);
 
             }
             
@@ -77,11 +98,27 @@ public class CollisionDetection : MonoBehaviour
         transform.GetComponent<Renderer>().material.color = greencolor;
         //GameObject obj_assailant = GameObject.FindWithTag("Assailant");
         //GameObject obj_animator = GameObject.FindWithTag("Assailant");
+        
+        switch (animationType)
+        {
+            case 1://poke animation
+                animator.SetBool("gotPoked", true);
+                break;
+            case 2://punch animation
+                animator.SetBool("gotBlock", true);
+                break;
+            case 3://groin animation
+                animator.SetBool("groinHit", true);
+                break;
+        }
 
+       /*
+       //works
         if (gameObject.tag == "Poke")
         {
             animator.SetBool("gotPoked", true);
         }
+        */
         /*
         if (obj_assailant != null)
         {

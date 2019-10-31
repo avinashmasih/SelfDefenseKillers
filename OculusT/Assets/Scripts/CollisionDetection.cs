@@ -14,7 +14,8 @@ public class CollisionDetection : MonoBehaviour
     public GameObject obj_assailant;
 
     public int animationType;
-        
+
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +100,7 @@ public class CollisionDetection : MonoBehaviour
         //GameObject obj_assailant = GameObject.FindWithTag("Assailant");
         //GameObject obj_animator = GameObject.FindWithTag("Assailant");
         
+       
         switch (animationType)
         {
             case 1://poke animation
@@ -111,14 +113,17 @@ public class CollisionDetection : MonoBehaviour
                 animator.SetBool("groinHit", true);
                 break;
         }
+        
 
-       /*
+      /*
        //works
         if (gameObject.tag == "Poke")
         {
             animator.SetBool("gotPoked", true);
         }
+
         */
+        
         /*
         if (obj_assailant != null)
         {

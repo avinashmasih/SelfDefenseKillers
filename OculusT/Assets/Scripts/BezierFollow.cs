@@ -13,7 +13,8 @@ public class BezierFollow : MonoBehaviour
     private float speedModifier;
     private bool coroutineAllowed;
     private bool keypress;
-    
+
+    int numberOfGhostTrails = 1;
 
 
     // Start is called before the first frame update
@@ -38,12 +39,14 @@ public class BezierFollow : MonoBehaviour
         }
 
         */
+        if(numberOfGhostTrails <= 2) { //we want to let the ghost trail run twice
         if (coroutineAllowed)
             {
                 StartCoroutine(GoByTheRoute(routeToGo));
+            numberOfGhostTrails++;
                    
             }
-        
+        }
     }
 
     private IEnumerator GoByTheRoute(int routeNumber)
@@ -68,12 +71,27 @@ public class BezierFollow : MonoBehaviour
         }
 
         tParam = 0f;//for the next coroutine
-        routeToGo += 1;//to get the next curve
 
+        /*
+        for(int i = 0; i<(routes.Length - 1); i++)
+        {
+           
+        }
+        */
+
+
+        /*
+        while (routeToGo < routes.Length - 1)
+        {
+            routeToGo += 1;//to get the next curve
+        }*/
+
+        //routeToGo += 1;//to get the next curve
+        /*
         if (routeToGo > routes.Length - 1)
         {
-            routeToGo = 0;//loop
-        }
+            //routeToGo = 0;//loop
+        }*/
 
         coroutineAllowed = true;
     }

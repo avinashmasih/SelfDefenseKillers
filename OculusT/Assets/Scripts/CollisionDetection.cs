@@ -14,6 +14,10 @@ public class CollisionDetection : MonoBehaviour
     public GameObject obj_assailant;
 
     public int animationType;
+    /*1 Poke
+     *2 Punch
+     *3 Groin     
+    */
 
  
     // Start is called before the first frame update

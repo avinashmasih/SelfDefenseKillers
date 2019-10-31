@@ -11,11 +11,18 @@ public class BezierFollow : MonoBehaviour
     private float tParam;
     private Vector3 handPosition;
     private float speedModifier;
-    private bool coroutineAllowed;
+    public bool coroutineAllowed;
     private bool keypress;
+    
 
     int numberOfGhostTrails = 1;
-
+    public int routeType;
+    /*
+     * 1 Poke
+     * 2 Punch
+     * 3 Groin
+     */
+    public GameObject obj_assailant;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +31,10 @@ public class BezierFollow : MonoBehaviour
         tParam = 0f;
         speedModifier = 0.4f;
         keypress = false;
+        GameObject obj_assailant = GameObject.FindWithTag("Assailant");
         
-        coroutineAllowed = true;
+
+        //coroutineAllowed = true;
     }
 
     // Update is called once per frame
@@ -87,11 +96,11 @@ public class BezierFollow : MonoBehaviour
         }*/
 
         //routeToGo += 1;//to get the next curve
-        /*
+        
         if (routeToGo > routes.Length - 1)
         {
             //routeToGo = 0;//loop
-        }*/
+        }
 
         coroutineAllowed = true;
     }

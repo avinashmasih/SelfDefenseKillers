@@ -8,15 +8,13 @@ public class AssailantState : MonoBehaviour
     public bool reset = false;
     public bool poked = false;
 
+
     private void Update()
     {
         if (OVRInput.Get(OVRInput.Button.One))//button A
         {
             anim.SetTrigger("pokeApproach");//animations for poke & punch approach and fail state are the same / differ in win state
-            if(poked)
-            {
-                anim.SetBool("gotPoked", true);
-            }
+ 
         }
 
 
@@ -24,6 +22,8 @@ public class AssailantState : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.Three))//button x
         {
             anim.SetTrigger("groinApproach");
+            anim.SetBool("poke", true);
+
         }
 
         //if (Input.GetKeyDown(KeyCode.X))

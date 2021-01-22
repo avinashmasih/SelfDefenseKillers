@@ -7,7 +7,7 @@ Self Defense Killers is an educational VR game which aims to teach self defense 
 
 ## My Work
 - Making all the interactions and transitions in C#/Unity3D
-- Animation State Tree to integrate Mocap animation into the game
+- Created the Animation State Tree for the game.
 - Cleaning/Normalizing Motion capture data and re-targeting it to a custom skeleton
 
 ## Video
